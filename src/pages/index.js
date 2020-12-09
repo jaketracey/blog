@@ -1,32 +1,28 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteDescription = data.site.siteMetadata?.description || `Description`
   const posts = data.allMarkdownRemark.nodes
 
   if (posts.length === 0) {
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout location={location} title={siteTitle} description={siteDescription}>
         <SEO title="All posts" />
-        <Bio />
         <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
+          No blog posts found.
         </p>
       </Layout>
     )
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} description={siteDescription}>
       <SEO title="All posts" />
-      <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -70,6 +66,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

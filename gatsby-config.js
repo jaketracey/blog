@@ -1,17 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Jake Tracey`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Jake Tracey`,
+      summary: `a programmer who lives in Melbourne, Australia`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `Thoughts on web accessibility, user experience and technology.`,
+    siteUrl: `https://jaketracey.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `jaketracey`,
     },
   },
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -60,8 +61,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Jake Tracey`,
+        short_name: `blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
