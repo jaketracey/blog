@@ -1,43 +1,109 @@
 ---
-title: Accessible Inverted Colors
-date: "2020-12-10T22:40:32.169Z"
+title: Styling accessible HTML file inputs
+date: "2020-12-11T22:40:32.169Z"
 ---
 
-Recently when developing styles for accessible form inputs an interesting challenge came up - 
-how to handle the inverted colour schemes that are available on Windows computers.
+The HTML file input seems to be something of a black sheep of the web developer world. Although it's used pretty extensively, the default implementation leaves
+a lot to be desired without resorting to Javascript. I investigated what could be done using CSS only in terms of styling and have had some good results.
 
-For reference, to switch a Windows PC to use inverted colors, you can use the keyboard shortcut
+## It's two elements (but not really)
 
-```
-Shift+Alt+PrtScr
-```
+The first thing you notice when including `<input type="file" />` is that it has two parts that would normally be distinct element - a button to initiate the operating system file picker dialog, and a line of text indicating to the user that they should choose a file or if a file has been chosen, display the path or name of that file.
 
-By default, form inputs like `<input>` and `<textarea>` will look fine and the colors will invert properly.
+This begs the question - how do you style the two seperate parts of this (one) element?
 
-However, if you are doing custom styling without using the `border` property, for example using `box-shadow` and hiding the border in a standard color view, you may notice that box shadows on these elements do not appear in the inverted mode, creating an accessiblity issue for users that are using the inverted mode.
+The general consensus online is by linking a `<label>` element to the `input` and hiding the actual `input`, the `label` becomes a focusable/clickable facsimile of the actual element, with which you can style to your liking. You can then replicate the functionality of the text displaying the filename with Javascript.
 
-A quick trick to fix this issue is by adding a transparent border to those elements, like so:
+Hoping to not have to reinvent the functionality of the `<input>` itself, let's try to find a way using just CSS.
 
-```css
-border: 1px solid transparent;
-```
+## Styling the file input
 
-This could potentially create a gap if you are using a combination of inset and outside box-shadow properties - so we can use a media query to specify when it should be used - in this case, when the inverted mode is active.
-
-There are two useful media queries that are currently available that can achieve this goal:
-
-`-ms-high-contrast: active` and `forced-colors: active`
-
-The first media query works on older versions of Internet Explorer, and `forced-colors` works on (most) modern browsers.
-
-The final code should look something like this:
+To style the `input`, you can use the CSS attribute selector:
 
 ```css
-@media screen and (-ms-high-contrast: active), (forced-colors: active) {
-  border: 1px solid transparent;
+input[type=file]{
+  // your code here
 }
 ```
 
-A side note: currently neither of these media queries appear to work on the latest Firefox as of writing this. 
+On Firefox, Blink and Webkit based browsers, this will allow you to customise the styling of the file name text, position the element and add spacing, but it does not 
+impact the button itself. On IE11, apart from positioning and spacing, this selector is practically useless. Moving on...
 
-Both are fully supported in the latest Microsoft Edge, which is the best supported browser when using inverted color mode.
+## Psuedo selectors
+
+I'll start this off with the bad news - there is no single psuedo selector that handles `<input type="file">` everywhere. Each browser (Chrome/Firefox/IE11) has their own implementation of how to address the insides of the `input` with varying levels of control. Here's a basic rundown:
+
+### Chrome (Blink/Webkit browsers)
+
+```css
+input[type=file]::-webkit-file-upload-button {
+    // your code here
+}
+```
+
+### Firefox 
+
+```css
+input[type=file]::file-selector-button {
+    // your code here
+}
+```
+
+
+A few things to note here. Both Firefox and Blink/Chrome based browsers have selectors that allow practically full customization of the file selector button. 
+You can add hover/focus/active states using their selectors, for example:
+
+```css
+input[type=file]:hover::-webkit-file-upload-button {
+  // hover state css
+}
+
+input[type=file]:active::-webkit-file-upload-button {
+  // active state css
+}
+
+input[type=file]:focus::-webkit-file-upload-button {
+  // focus state css
+}
+```
+
+The actual label of the button does not appear to be customizable, even using the `content` CSS property. At the time of writing both use sane defaults for these,
+so if you must change the button label further, using the Javascript + `<label>` trick is your best bet.
+
+You can even modify the positioning of the file name text by setting `display: block` on both elements, for a nicer 'file name under button' look.
+
+I noticed some strangeness around `box-shadow` property not rendering correctly due to the constraints of the containing box model. By adding some padding to the
+`input` itself it will give the element space to render any content inside.
+
+
+### Internet Explorer 11
+
+```css
+input[type="file"]::-ms-value {
+    // file name styles
+}
+
+input[type="file"]::-ms-browse {
+    // button styles
+}
+```
+
+IE11 provides psuedo elements to modify the styling of both the input and the file name text - with some caveats. The IE11 file upload widget by default renders a
+text box before the browse button, and this does not render text inside of it (e.g. Choose file) prior to a user selecting one. 
+
+This can create a strange look if you remove the borders from the text box using `::-ms-value` - I opted to style that box the same as other text inputs in the design
+to maintain some consistency for the user.
+
+When a file is selected, IE11 also writes the *entire path* to the file on your local system, somewhat reducing the usefulness of this box if it is not extremely wide.
+
+I was also unable to modify the actual layout/order of the items in the rendered widget beyond width/height/padding modifications.
+
+Due to IE11's support becoming smaller and smaller each day, I comprimised on the final result by applying the same button styles as the Blind/Firefox counterparts,
+but retaining the look and feel of a text input on the file name area so that it was relatively consistent for the user.
+
+## Conclusion
+
+It is entirely possible to style `<input type="file" />` on modern browsers in a way that does not impact the visual look and feel of
+your design. Although not as powerful as a full fledged custom file upload widget, because it is default browser functionality and is widely supported, thanks to 
+the highly vendor specific selectors that are available you can provide an accessible, good looking utility to upload files without any Javascript.
+
