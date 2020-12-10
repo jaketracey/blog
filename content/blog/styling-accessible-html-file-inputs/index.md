@@ -21,7 +21,7 @@ Hoping to not have to reinvent the functionality of the `<input>` itself, let's 
 To style the `input`, you can use the CSS attribute selector:
 
 ```css
-input[type=file]{
+input[type=file] {
   // your code here
 }
 ```
