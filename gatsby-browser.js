@@ -1,6 +1,5 @@
 // custom typefaces
-import "fontsource-halant"
-import "fontsource-nunito-sans"
+import "fontsource-fanwood-text"
 
 // normalize CSS across browsers
 import "./src/normalize.scss"

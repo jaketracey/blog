@@ -8,6 +8,7 @@
     "url": "https://github.com/jaketracey/blog/issues"
   },
   "dependencies": {
+    "fontsource-fanwood-text": "^3.1.5",
     "fontsource-halant": "^3.1.5",
     "fontsource-nunito-sans": "^3.1.5",
     "gatsby": "^2.26.1",

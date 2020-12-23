@@ -28,8 +28,8 @@ const Layout = ({ location, title, description, children }) => {
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()} - Jake Tracey
+      <footer class="main-footer">
+        <p>All great deeds and all great thoughts have a ridiculous beginning. Great works are often born on a street corner or in a restaurant's revolving door. - Albert Camus</p>
       </footer>
     </div>
   )
