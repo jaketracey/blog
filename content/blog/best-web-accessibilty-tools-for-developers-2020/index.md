@@ -18,7 +18,7 @@ These are the pages that I keep bookmarked for reference and to learn new techni
 * [Smashing Magazine - Accessibility](https://www.smashingmagazine.com/category/accessibility)
 * [CSS Tricks - Accessibility](https://css-tricks.com/tag/accessibility/)
 
-There are a number of great accessibilty blogs on the web which I suggest browsing - a good jumping off point is available at [Digital A11y](https://www.digitala11y.com/accessibility-blogs/).
+There are a number of great accessibility blogs on the web which I suggest browsing - a good jumping off point is available at [Digital A11y](https://www.digitala11y.com/accessibility-blogs/).
 
 ## Development tools
 
