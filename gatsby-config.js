@@ -74,5 +74,36 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-transformer-remark",
+        options: {
+          plugins: [{
+            resolve: "gatsby-remark-lottie",
+            options: {
+              // Whether or not to generate static SVG placeholders.
+              // If this is false, an empty div will render until
+              // the lottie script starts the animation.
+              generatePlaceholders: true,
+  
+              // lottie-web is loaded from CDN to start the animations.
+              // This controls which version of the script is loaded.
+              lottieVersion: "5.7.1",
+  
+              // The renderer to use (html, canvas, or svg). The static
+              // placeholder will always be an SVG despite this value.
+              // See the lottie-web docs: https://github.com/airbnb/lottie-web#html
+              renderer: "svg",
+  
+              // Whether or not to loop the animation.
+              // See the lottie-web docs: https://github.com/airbnb/lottie-web#html
+              loop: false,
+  
+              // Whether or not to autoplay the animation on load.
+              // See the lottie-web docs: https://github.com/airbnb/lottie-web#html
+              autoplay: true
+            }
+          }]
+        }
+    }
   ],
 }
