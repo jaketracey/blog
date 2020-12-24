@@ -38,9 +38,9 @@ There are a number of great accessibility blogs on the web which I suggest brows
 
 Catching issues before they are in production is one of the major benefits of adding accessiblity tooling to your CI pipeline. Recently there has been huge progress in the ease of integration and reporting in this space, which I expect will continue to improve over the next year.
 
-* [pa11y-ci](https://github.com/pa11y/pa11y-ci) - A set of command line tools for pa11y, pa11y-ci gives you the oppurtunity to run your suite of pa11y tests on your CI server. 
+* [pa11y-ci](https://github.com/pa11y/pa11y-ci) - A set of command line tools for pa11y, pa11y-ci gives you the opportunity to run your suite of pa11y tests on your CI server. 
 
-* [lighthouse-ci](https://github.com/GoogleChrome/lighthouse-ci) - If you're looking to run a comprehensive set of tests in your CI environment, lighthouse-ci brings all the power of Google's Lighthouse app to the table. In addition to it's accessibilty checks, lighthouse-ci will report on your app's performance, SEO and best practices in one of the most polished standalone reports available.
+* [lighthouse-ci](https://github.com/GoogleChrome/lighthouse-ci) - If you're looking to run a comprehensive set of tests in your CI environment, lighthouse-ci brings all the power of Google's Lighthouse app to the table. In addition to accessibilty checks, lighthouse-ci will report on your app's performance, SEO and best practices in one of the most polished standalone reports available.
 
 ## Screen readers
 
@@ -48,8 +48,6 @@ Catching issues before they are in production is one of the major benefits of ad
 
 
 * [NVDA](https://www.nvaccess.org/about-nvda/) - NVDA is my screen reader of choice for testing because it's open source and free. It's also updated quite freqently and in my experience, has less quirks than JAWS. I expect in the coming years NVDA will overtake JAWS in terms of popularity, so if you were to pick one to learn, NVDA would be it.
-
-
 
 * [VoiceOver](https://help.apple.com/voiceover/info/guide/) - VoiceOver is the defacto standard for screen readers on iOS and Mac OS X. It is extremely easy to use and the documentation is incredible. The vast majority of screen reader users on mobile are using VoiceOver so it is the most important tool you can use if a mobile audience is your primary demographic.
 
