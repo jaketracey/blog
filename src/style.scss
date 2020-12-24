@@ -183,8 +183,8 @@ ol {
   margin-right: var(--spacing-0);
   padding: var(--spacing-0);
   margin-bottom: var(--spacing-8);
-  list-style: inside;
-  margin-left: var(--spacing-5);
+  list-style-position: outside;
+  list-style-image: none;
 }
 
 ul li,
@@ -315,6 +315,11 @@ a:focus {
 
 .blog-post header h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+}
+
+.blog-post ul, ol {
+  list-style: inside;
+  margin-left: var(--spacing-2);
 }
 
 .blog-post header p {
