@@ -12,6 +12,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-mdx`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -77,7 +78,8 @@ module.exports = {
     {
       resolve: "gatsby-transformer-remark",
         options: {
-          plugins: [{
+          plugins: [
+            {
             resolve: "gatsby-remark-lottie",
             options: {
               // Whether or not to generate static SVG placeholders.
