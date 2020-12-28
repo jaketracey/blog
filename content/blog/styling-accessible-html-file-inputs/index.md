@@ -8,20 +8,20 @@ a lot to be desired without resorting to Javascript. I investigated what could b
 
 ## It's two elements (but not really)
 
-The first thing you notice when including `<input type="file" />` is that it has two parts that would normally be distinct element - a button to initiate the operating system file picker dialog, and a line of text indicating to the user that they should choose a file or if a file has been chosen, display the path or name of that file.
+The first thing you notice when including `html±<input type="file" />` is that it has two parts that would normally be distinct element - a button to initiate the operating system file picker dialog, and a line of text indicating to the user that they should choose a file or if a file has been chosen, display the path or name of that file.
 
 This begs the question - how do you style the two seperate parts of this (one) element?
 
-The general consensus online is by linking a `<label>` element to the `input` and hiding the actual `input`, the `label` becomes a focusable/clickable facsimile of the actual element, with which you can style to your liking. You can then replicate the functionality of the text displaying the filename with Javascript.
+The general consensus online is by linking a `html±<label>` element to the `html±<input>` and hiding the actual `html±<input>`, the `html±<label>` becomes a focusable/clickable facsimile of the actual element, with which you can style to your liking. You can then replicate the functionality of the text displaying the filename with Javascript.
 
-Hoping to not have to reinvent the functionality of the `<input>` itself, let's try to find a way using just CSS.
+Hoping to not have to reinvent the functionality of the `html±<input>` itself, let's try to find a way using just CSS.
 
 ## Styling the file input
 
-To style the `input`, you can use the CSS attribute selector:
+To style the `html±<input>`, you can use the CSS attribute selector:
 
-```css
-input[type=file] {
+```sass
+input[type="file"] {
   // your code here
 }
 ```
@@ -31,20 +31,20 @@ impact the button itself. On IE11, apart from positioning and spacing, this sele
 
 ## Psuedo selectors
 
-I'll start this off with the bad news - there is no single psuedo selector that handles `<input type="file">` everywhere. Each browser (Chrome/Firefox/IE11) has their own implementation of how to address the insides of the `input` with varying levels of control. Here's a basic rundown:
+I'll start this off with the bad news - there is no single psuedo selector that handles `html±<input type="file">` everywhere. Each browser (Chrome/Firefox/IE11) has their own implementation of how to address the insides of the `html±<input>` with varying levels of control. Here's a basic rundown:
 
 ### Chrome (Blink/Webkit browsers)
 
-```css
-input[type=file]::-webkit-file-upload-button {
+```sass
+input[type="file"]::-webkit-file-upload-button {
     // your code here
 }
 ```
 
 ### Firefox 
 
-```css
-input[type=file]::file-selector-button {
+```sass
+input[type="file"]::file-selector-button {
     // your code here
 }
 ```
@@ -53,32 +53,32 @@ input[type=file]::file-selector-button {
 A few things to note here. Both Firefox and Blink/Chrome based browsers have selectors that allow practically full customization of the file selector button. 
 You can add hover/focus/active states using their selectors, for example:
 
-```css
-input[type=file]:hover::-webkit-file-upload-button {
+```sass
+input[type="file"]:hover::-webkit-file-upload-button {
   // hover state css
 }
 
-input[type=file]:active::-webkit-file-upload-button {
+input[type="file"]:active::-webkit-file-upload-button {
   // active state css
 }
 
-input[type=file]:focus::-webkit-file-upload-button {
+input[type="file"]:focus::-webkit-file-upload-button {
   // focus state css
 }
 ```
 
-The actual label of the button does not appear to be customizable, even using the `content` CSS property. At the time of writing both use sane defaults for these,
-so if you must change the button label further, using the Javascript + `<label>` trick is your best bet.
+The actual label of the button does not appear to be customizable, even using the `scss±content` CSS property. At the time of writing both use sane defaults for these,
+so if you must change the button label further, using the Javascript + `html±<label>` trick is your best bet.
 
 You can even modify the positioning of the file name text by setting `display: block` on both elements, for a nicer 'file name under button' look.
 
 I noticed some strangeness around `box-shadow` property not rendering correctly due to the constraints of the containing box model. By adding some padding to the
-`input` itself it will give the element space to render any content inside.
+`html±<input>` itself it will give the element space to render any content inside.
 
 
 ### Internet Explorer 11
 
-```css
+```sass
 input[type="file"]::-ms-value {
     // file name styles
 }
@@ -88,8 +88,7 @@ input[type="file"]::-ms-browse {
 }
 ```
 
-IE11 provides psuedo elements to modify the styling of both the input and the file name text - with some caveats. The IE11 file upload widget by default renders a
-text box before the browse button, and this does not render text inside of it (e.g. Choose file) prior to a user selecting one. 
+IE11 provides psuedo elements to modify the styling of both the input and the file name text - with some caveats. The IE11 file upload widget by default renders a  text box before the browse button, and this does not render text inside of it (e.g. Choose file) prior to a user selecting one. 
 
 This can create a strange look if you remove the borders from the text box using `::-ms-value` - I opted to style that box the same as other text inputs in the design
 to maintain some consistency for the user.
@@ -103,7 +102,7 @@ but retaining the look and feel of a text input on the file name area so that it
 
 ## Conclusion
 
-It is entirely possible to style `<input type="file" />` on modern browsers in a way that does not impact the visual look and feel of
+It is entirely possible to style `html±<input type="file" />` on modern browsers in a way that does not impact the visual look and feel of
 your design. Although not as powerful as a full fledged custom file upload widget, because it is default browser functionality and is widely supported, thanks to 
 the highly vendor specific selectors that are available you can provide an accessible, good looking utility to upload files without any Javascript.
 

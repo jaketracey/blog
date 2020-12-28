@@ -12,7 +12,7 @@ For reference, to switch a Windows PC to use inverted colors, you can use the ke
 Shift+Alt+PrtScr
 ```
 
-By default, form inputs like `<input>` and `<textarea>` will look fine and the colors will invert properly.
+By default, form inputs like `html±<input>` and `html±<textarea>` will look fine and the colors will invert properly.
 
 However, if you are doing custom styling without using the `border` property, for example using `box-shadow` and hiding the border in a standard color view, you may notice that box shadows on these elements do not appear in the inverted mode, creating an accessiblity issue for users that are using the inverted mode.
 
@@ -26,7 +26,7 @@ This could potentially create a gap if you are using a combination of inset and 
 
 There are two useful media queries that are currently available that can achieve this goal:
 
-`-ms-high-contrast: active` and `forced-colors: active`
+`css±-ms-high-contrast: active` and `css±forced-colors: active`
 
 The first media query works on older versions of Internet Explorer, and `forced-colors` works on (most) modern browsers.
 
