@@ -15,6 +15,7 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-preload-fonts`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

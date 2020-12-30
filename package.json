@@ -21,11 +21,12 @@
     "gatsby-plugin-manifest": "^2.6.1",
     "gatsby-plugin-mdx": "^1.7.1",
     "gatsby-plugin-offline": "^3.4.0",
+    "gatsby-plugin-preload-fonts": "^1.6.1",
     "gatsby-plugin-react-helmet": "^3.4.0",
     "gatsby-plugin-sass": "^2.7.0",
     "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-plugin-sitemap": "^2.9.0",
-    "gatsby-remark-copy-linked-files": "^2.4.0",
+    "gatsby-remark-copy-linked-files": "^2.7.0",
     "gatsby-remark-images": "^3.8.1",
     "gatsby-remark-lottie": "^1.0.3",
     "gatsby-remark-prismjs": "^3.10.0",
@@ -63,6 +64,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "preload-fonts": "gatsby-preload-fonts"
   }
 }
