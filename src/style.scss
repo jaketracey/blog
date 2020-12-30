@@ -1,3 +1,6 @@
+@import 'normalize';
+@import 'prism';
+
 /* CSS Custom Properties Definitions */
 
 :root {
@@ -60,6 +63,18 @@
   --color-heading: #666;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --color-text-shadow: #fff;
+  --color-border: #666;
+
+  @media (prefers-color-scheme: dark) {
+      --color-primary: #e45e6e;
+      --color-text: rgb(228, 228, 228);
+      --color-text-light: #dddddd;
+      --color-heading: rgb(204, 204, 204);
+      --color-heading-black: #ccc;
+      --color-text-shadow: #121212;
+      --color-border: rgb(104, 104, 104);
+  }
 }
 
 /* HTML elements */
@@ -82,7 +97,10 @@ body {
   font-size: var(--fontSize-2);
   color: var(--color-text);
   background: url('/bg.gif') repeat;
-  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+  @media (prefers-color-scheme: dark) {
+    background: #121212;
+  }
+  text-shadow: --color-text-shadow 0 0 1px;
 }
 
 .global-header {
@@ -94,7 +112,7 @@ body {
 }
 
 .main-footer {
-  border-top: 3px solid #EEE;
+  border-top: 3px solid var(--color-border);
   padding: var(--spacing-6) var(--spacing-0);
   font-size: var(--fontSize-2);
   font-style: italic;
@@ -125,6 +143,7 @@ h4,
 h5,
 h6 {
   color: var(--color-heading);
+
 }
 
 h1 {
@@ -247,14 +266,13 @@ a {
   outline-offset: 0.2rem;
   outline: 3px solid transparent;
   transition: all 0.3s ease;
-  text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
-  box-shadow: inset 0 -1px 0 0 #fff, inset 0 -2px 0 0 var(--color-primary);
+  text-shadow: 1px 1px 0 var(--color-text-shadow), -1px 1px 0 var(--color-text-shadow), 2px 0 0 var(--color-text-shadow), -2px 0 0 var(--color-text-shadow);
+  box-shadow: inset 0 -1px 0 0 var(--color-text-shadow), inset 0 -2px 0 0 var(--color-primary);
 }
 
 a:hover {
   color: #222;
   box-shadow: inset 0 -1px 0 0 #fff, inset 0 -2px 0 0 #222;
-
 }
 
 a:focus {
@@ -339,7 +357,7 @@ a:focus {
 
 .blog-post header p {
   letter-spacing: 0px;
-  border-top: 3px solid #EEE;
+  border-top: 3px solid var(--color-border);
   padding-top: var(--spacing-4);
 
 }
