@@ -4,11 +4,13 @@ date: "2020-12-31T22:40:32.169Z"
 ---
 
 One of the promises of virtual reality is the ability to bring worlds to life that would never have been possible using technologies from the past. The speed with which VR has progressed in visual and auditory fidelity has outpaced the web in many respects and with the announcement of 
-a high level [set of accessiblity guidelines](https://developer.oculus.com/blog/introducing-the-accessibility-vrcs/) when publishing VR apps on the Oculus store, the speed with which a fully accessible VR future is following the same trajectory.
+a high level [set of accessiblity guidelines](https://developer.oculus.com/blog/introducing-the-accessibility-vrcs/) when publishing VR apps on the Oculus store, the speed with which a fully accessible VR future is becoming viable is increasing.
 
 Given that VR is primarily a visual medium there is no requirement for the application to function for completely non-sighted users. There is, however, welcomes additions to provide assistance for those with hearing, mobility and visual impairments.
 
 ## The guidelines
+
+Oculus has created a set of [Virtual Reality Check (VRC) Guidelines](https://developer.oculus.com/distribute/publish-quest-req/) which I will break down below. Currently the guidelines are suggested for Quest applications only - in the future we will possibly see a similar set for the Go and Rift headsets.
 
 ### The app should be playable without audio.
 
