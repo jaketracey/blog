@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle} description={siteDescription}>
-        <SEO title="All posts" />
+        <SEO title="Thoughts on web accessibility, user experience and technology." />
         <p>
           No blog posts found.
         </p>
@@ -22,7 +22,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle} description={siteDescription}>
-      <SEO title="All posts" />
+      <SEO title="Thoughts on web accessibility, user experience and technology." />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
