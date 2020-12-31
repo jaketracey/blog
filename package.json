@@ -11,8 +11,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "fontsource-fanwood-text": "^3.1.5",
-    "fontsource-halant": "^3.1.5",
-    "fontsource-nunito-sans": "^3.1.5",
+    "@fontsource/questrial": "^4.0.0",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-feed": "^2.7.0",
@@ -40,9 +39,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "sass": "^1.30.0",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "sass": "^1.30.0"
   },
   "devDependencies": {
     "prettier": "2.1.2"
