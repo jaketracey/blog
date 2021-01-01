@@ -6,7 +6,7 @@ date: "2020-12-11T22:40:32.169Z"
 The HTML file input is one of the weirder elements I've come across. Although it's used pretty extensively, the default implementation leaves
 a lot to be desired without resorting to Javascript. I investigated what could be done using CSS only in terms of styling and have had some good results.
 
-## It's two elements (but not really)
+## One element... kinda?
 
 The first thing you notice when including `html±<input type="file" />` is that it has two parts that would normally be distinct element - a button to initiate the operating system file picker dialog, and a line of text indicating to the user that they should choose a file or if a file has been chosen, display the path or name of that file.
 
