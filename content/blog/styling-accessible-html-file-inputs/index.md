@@ -3,7 +3,7 @@ title: Styling accessible HTML file inputs
 date: "2020-12-11T22:40:32.169Z"
 ---
 
-The HTML file input seems to be something of a black sheep of the web developer world. Although it's used pretty extensively, the default implementation leaves
+The HTML file input is one of the weirder elements I've come across. Although it's used pretty extensively, the default implementation leaves
 a lot to be desired without resorting to Javascript. I investigated what could be done using CSS only in terms of styling and have had some good results.
 
 ## It's two elements (but not really)
