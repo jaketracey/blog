@@ -1,5 +1,5 @@
 ---
-title: An inclusive and accessible virtual reality
+title: Accessible virtual reality takes its first steps
 date: "2020-12-31T22:40:32.169Z"
 ---
 
@@ -10,7 +10,7 @@ Given that VR is primarily a visual medium there is no requirement for the appli
 
 ## The guidelines
 
-Oculus has created a set of [Virtual Reality Check (VRC) Guidelines](https://developer.oculus.com/distribute/publish-quest-req/) which I will break down below. Currently the guidelines are suggested for Quest applications only - in the future we will possibly see a similar set for the Go and Rift headsets.
+Oculus has created a set of [Virtual Reality Check (VRC) Guidelines](https://developer.oculus.com/distribute/publish-quest-req/) which I will break down below. Currently the guidelines are suggested for Quest applications only - in the future we will possibly see a similar set for other headsets.
 
 ### The app should be playable without audio.
 
