@@ -52,7 +52,7 @@ Interestingly, this is exactly what this guideline does. Oculus has supported bo
 
 ## Standards adoption
 
-The adoption of accessibility standards on the web has taken decades to reach a level where all users can _start_ to expect a usable experience. By taking the first step to providing a set of guidelines, Oculus has taken a giant step forward that should fast track this process for VR developers and users. 
+The adoption of accessibility standards on the web has taken decades to reach a level where all users can _start_ to expect a usable experience. Oculus's first step of providing a set of guidelines is a significant one that will hopefully fast-track accessibility adoption for VR developers and users. 
 
 Looking back, one of the key reasons that web accessiblity took so long to get to where we are now was a combination of 3 factors - cost of development, a lack of compatibilty and education. The oppurtunity for Oculus and other VR hardware and software manufacterers to provide a consistent set of accessiblity options through a consistent UI and developer tools is unmistakable.
 
