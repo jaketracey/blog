@@ -44,7 +44,7 @@ For users with mobility constraints but without any other significant accessibil
 
 ### The app should support multiple locomotion styles when possible.
 
-Movement in VR, particularly locomotion has always presented a difficult problem for even experienced, fully capable users. Free locomotion, although for many the most immersive and flexible type of movement is notorious for inducing motion sickness in many people. Teleportation is widely adopted and most applications already support multiple types of movements. Where I think this reccomendation could be improved is by expressing the impact to users when utilizing other types locomotion, for example, by including a line in the description of 'all aspects of the application should be available to the user when using different forms of locomotion'.
+Movement in VR, particularly locomotion has always presented a difficult problem for even experienced, fully capable users. Free locomotion, although for many the most immersive and flexible type of movement is notorious for inducing motion sickness in many people. Teleportation is widely adopted and most applications already support multiple types of movements. Where I think this recommendation could be improved is by expressing the impact to users when utilizing other of types locomotion, for example, by including a line in the description of 'all aspects of the application should be available to the user when using different forms of locomotion'.
 
 ### Applications that can be used in sitting or standing mode should provide a setting to enable users to perform all interactions and access information from a fixed position.
 
