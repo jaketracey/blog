@@ -1,5 +1,5 @@
 ---
-title: Accessible virtual reality takes its first steps
+title: Accessible virtual reality
 date: "2020-12-31T22:40:32.169Z"
 ---
 
@@ -14,7 +14,7 @@ Oculus has created a set of [Virtual Reality Check (VRC) Guidelines](https://dev
 
 ### The app should be playable without audio.
 
-Although not a requirement, it is recomended to ensure that the application is playable entirely without the use of audio and to provide subtitles for dialogue and sound effects that are played to the user.
+Although not a requirement, it is recommended to ensure that the application is playable entirely without the use of audio and to provide subtitles for dialogue and sound effects that are played to the user.
 
 This alone should increase the usability of all VR apps for those with hearing issues and I would hope that this guideline becomes a requirement and an API created to communicate audio cues via haptics or a consistent visual interface. 
 
@@ -48,7 +48,7 @@ Movement in VR, particularly locomotion has always presented a difficult problem
 
 ### Applications that can be used in sitting or standing mode should provide a setting to enable users to perform all interactions and access information from a fixed position.
 
-Interestingly, this is exactly what this guideline does. Oculus has supported both sitting and standing modes so having a guideline defining specifically that all interactions and information should be accessible from a fixed position is perfect. In the future, I hope that all applications can be used from a seated position with the help of accessible UIs, such as external controllers or eye tracking to faciliate movement and interactions for users with mobility issues. 
+Interestingly, this is exactly what this guideline does. Oculus has supported both sitting and standing modes so having a guideline defining specifically that all interactions and information should be accessible from a fixed position is perfect. In the future, I hope that all applications can be used from a seated position with the help of accessible UIs, such as external controllers or eye tracking to facilitate movement and interactions for users with mobility issues. 
 
 ## Standards adoption
 
