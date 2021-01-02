@@ -28,8 +28,11 @@ const Layout = ({ location, title, description, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
+      <a class="skip-to-content-link" href="#main-content">
+        Skip to content
+      </a>
       <header className="global-header">{header}</header>
-      <main>{children}</main>
+      <main id="main-content">{children}</main>
       <footer className="main-footer">
         <p>All great deeds and all great thoughts have a ridiculous beginning. Great works are often born on a street corner or in a restaurant's revolving door. - Albert Camus</p>
       </footer>

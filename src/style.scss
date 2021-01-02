@@ -100,6 +100,7 @@ body {
   @media (prefers-color-scheme: dark) {
     background: #121212;
   }
+  position: relative;
   text-shadow: --color-text-shadow 0 0 1px;
 }
 
@@ -123,6 +124,16 @@ hr {
   background: var(--color-accent);
   height: 1px;
   border: 0;
+}
+
+.skip-to-content-link {
+  position: absolute;
+  padding: var(--spacing-1);
+  top: -100px;
+}
+
+.skip-to-content-link:focus {
+  top: 6px;
 }
 
 /* Heading */
