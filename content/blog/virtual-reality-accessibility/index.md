@@ -4,7 +4,7 @@ date: "2020-12-31T22:40:32.169Z"
 ---
 
 One of the promises of virtual reality is the ability to bring to life worlds that would never have been possible using technologies from the past. The speed with which VR has progressed in visual and auditory fidelity has outpaced the web in many respects and with the announcement of 
-a high level [set of accessiblity guidelines](https://developer.oculus.com/blog/introducing-the-accessibility-vrcs/) when publishing VR apps on the Oculus store, the speed with which a fully accessible VR future is becoming viable is increasing.
+a high level [set of accessibility guidelines](https://developer.oculus.com/blog/introducing-the-accessibility-vrcs/) when publishing VR apps on the Oculus store, the speed with which a fully accessible VR future is becoming viable is increasing.
 
 Given that VR is primarily a visual medium there is no requirement for the application to function for completely non-sighted users. There are, however, welcome additions to provide assistance for those with hearing, mobility and visual impairments.
 
@@ -54,7 +54,7 @@ Interestingly, this is exactly what this guideline does. Oculus has supported bo
 
 The adoption of accessibility standards on the web has taken decades to reach a level where all users can _start_ to expect a usable experience. Oculus's first step of providing a set of guidelines is a significant one that will hopefully fast-track accessibility adoption for VR developers and users. 
 
-Looking back, the reason that web accessiblity took so long to get to where we are now was a combination of 3 factors: cost of development, lack of compatibility and lack of education. 
+Looking back, the reason that web accessibility took so long to get to where we are now was a combination of 3 factors: cost of development, lack of compatibility and lack of education. 
 
 Platform owners can address the problem of high costs to implement accessibility by providing simple, easy to implement APIs that developers can use to include features from specifications like the Oculus accessibility guidelines. 
  
@@ -62,6 +62,6 @@ Platform owners can address the problem of high costs to implement accessibility
 
 I believe the web is for everybody, and similarly I believe that virtual reality is for everyone too. No technology since the web has had the ability to completely change people's lives and remove the limitations of our human bodies in the same way that VR does. 
 
-It took a very long time for the web to become properly accessible. With the lessons that we've learned from web accessiblity, it will take far less for VR.
+It took a very long time for the web to become properly accessible. With the lessons that we've learned from web accessibility, it will take far less for VR.
 
 Still, this doesn't mean that there is no room for improvement and by creating VR applications that fundamentally improve the lives for those with disabilities, we can not only showcase the transformative nature of VR for media consumption, but more importantly, in ways that bring us closer together as humans.
