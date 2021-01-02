@@ -54,11 +54,14 @@ Interestingly, this is exactly what this guideline does. Oculus has supported bo
 
 The adoption of accessibility standards on the web has taken decades to reach a level where all users can _start_ to expect a usable experience. Oculus's first step of providing a set of guidelines is a significant one that will hopefully fast-track accessibility adoption for VR developers and users. 
 
-Looking back, one of the key reasons that web accessiblity took so long to get to where we are now was a combination of 3 factors - cost of development, a lack of compatibilty and education. The oppurtunity for Oculus and other VR hardware and software manufacterers to provide a consistent set of accessiblity options through a consistent UI and developer tools is unmistakable.
+Looking back, one of the key reasons that web accessiblity took so long to get to where we are now was a combination of 3 factors: cost of development, a lack of compatibility and education. 
 
-By expressing the needs of these users in a precise way the tools can be designed and implemented in a way that makes supporting all users, irresepective of their needs possible by developers. To address the issue of compatibliity, platforms should work together to design and create these tools and APIs for developers so that all HMDs and VR operating systems offer a consistent accessiblity experience.
+Platform owners can address the problem of high costs to implement accessibility by providing simple, easy to implement APIs that developers can use to include features from specifications like the Oculus accessibility guidelines. 
+ 
+ To address the issue of compatibility, the community and platform owners should work together to define an industry-wide accessibility standard and create tools and APIs for developers so that all HMDs and VR operating systems offer system level accessiblity options.
 
-I believe the web is for everybody, and similarly I believe that virtual reality is for everyone too. No technology since the web has had the ability to completely change people's lives, offer hope and freedom to the entire world and remove the limitations of our bodies in the same way that VR does. I also believe that people recognise and believe this too in a way that wasn't as commonplace in the early days of the web.
+I believe the web is for everybody, and similarly I believe that virtual reality is for everyone too. No technology since the web has had the ability to completely change people's lives and remove the limitations of our human bodies in the same way that VR does. 
 
-Still, this doesn't mean that there is no room for improvement and by creating VR applications that have the ability to fundamentally improve the lives of those with disabilities we can continue to not only exhibit the transformative nature of VR as a whole, but more importantly, the way that it can bring us closer together, especially for those that have had so many obstructions and challenges in their lives.
+It took a very long time for the web to become properly accessible. With the lessons that we've learned from web accessiblity, it will take far less for VR.
 
+Still, this doesn't mean that there is no room for improvement and by creating VR applications that fundamentally improve the lives for those with disabilities, we can not only showcase the transformative nature of VR for media consumption, but more importantly, in ways that bring us closer together as humans.
