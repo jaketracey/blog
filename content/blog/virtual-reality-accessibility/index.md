@@ -58,7 +58,7 @@ Looking back, the reason that web accessiblity took so long to get to where we a
 
 Platform owners can address the problem of high costs to implement accessibility by providing simple, easy to implement APIs that developers can use to include features from specifications like the Oculus accessibility guidelines. 
  
- To address the issue of compatibility, the community and platform owners should work together to define an industry-wide accessibility standard and create tools and APIs for developers so that all HMDs and VR operating systems offer system level accessiblity options.
+ To address the issue of compatibility, the community and platform owners should work together to define an industry-wide accessibility standard and create tools and APIs for developers so that all HMDs and VR operating systems offer system-level accessibility options.
 
 I believe the web is for everybody, and similarly I believe that virtual reality is for everyone too. No technology since the web has had the ability to completely change people's lives and remove the limitations of our human bodies in the same way that VR does. 
 
