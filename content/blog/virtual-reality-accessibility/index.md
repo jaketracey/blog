@@ -62,9 +62,3 @@ I believe the web is for everybody, and similarly I believe that virtual reality
 
 Still, this doesn't mean that there is no room for improvement and by creating VR applications that have the ability to fundamentally improve the lives of those with disabilities we can continue to not only exhibit the transformative nature of VR as a whole, but more importantly, the way that it can bring us closer together, especially for those that have had so many obstructions and challenges in their lives.
 
-## Moving forward 
-
-
-
-
-
