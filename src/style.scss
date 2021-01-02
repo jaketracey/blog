@@ -126,6 +126,11 @@ hr {
   border: 0;
 }
 
+.home-article-list {
+  margin-left: 0;
+  list-style: none;
+}
+
 .skip-to-content-link {
   position: absolute;
   padding: var(--spacing-1);
@@ -133,7 +138,7 @@ hr {
 }
 
 .skip-to-content-link:focus {
-  top: 6px;
+  top: 0;
 }
 
 /* Heading */
@@ -219,8 +224,6 @@ ol {
   padding: var(--spacing-0);
   margin-bottom: var(--spacing-8);
   list-style-position: outside;
-  list-style-image: none;
-
 }
 
 ul li,

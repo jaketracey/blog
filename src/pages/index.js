@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+  
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const siteDescription = data.site.siteMetadata?.description || `Description`
@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle} description={siteDescription}>
-        <SEO title="Thoughts on web accessibility, user experience and technology." />
+        <SEO title="All posts" />
         <p>
           No blog posts found.
         </p>
@@ -22,8 +22,8 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle} description={siteDescription}>
-      <SEO title="Thoughts on web accessibility, user experience and technology." />
-      <ol style={{ listStyle: `none` }}>
+      <SEO title="All posts" />
+      <ol className="home-article-list">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
