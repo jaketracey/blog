@@ -52,11 +52,11 @@ Interestingly, this is exactly what this guideline does. Oculus has supported bo
 
 ## Standards adoption
 
-The adoption of accessibility standards on the web has taken decades to reach a level of adoption where all users can start to expect a usable experience. By taking the first step to providing a set of guidelines, Oculus has taken a giant step forward that should fast track this process for VR developers and users. 
+The adoption of accessibility standards on the web has taken decades to reach a level where all users can start to expect a usable experience. By taking the first step to providing a set of guidelines, Oculus has taken a giant step forward that should fast track this process for VR developers and users. 
 
 Looking back, one of the key reasons that web accessiblity took so long to get to where we are now was a combination of 3 factors - cost of development, a lack of compatibilty and education. The oppurtunity for Oculus and other VR hardware and software manufacterers to provide a consistent set of accessiblity options through a consistent UI and developer tools is unmistakable.
 
-By expressing the needs of these users in a precise way this tooling can be designed and implemented in a way that makes supporting all users, irresepective of their needs possible by all developers. To address the issue of compatibliity, platforms should work together to design and create these tools and APIs for developers so that all HMDs and VR operating systems offer a consistent accessiblity experience.
+By expressing the needs of these users in a precise way the tools can be designed and implemented in a way that makes supporting all users, irresepective of their needs possible by developers. To address the issue of compatibliity, platforms should work together to design and create these tools and APIs for developers so that all HMDs and VR operating systems offer a consistent accessiblity experience.
 
 I believe the web is for everybody, and similarly I believe that virtual reality is for everyone too. No technology since the web has had the ability to completely change people's lives, offer hope and freedom to the entire world and remove the limitations of our bodies in the same way that VR does. I also believe that people recognise and believe this too in a way that wasn't as commonplace in the early days of the web.
 
