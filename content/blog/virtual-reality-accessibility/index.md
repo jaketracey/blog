@@ -64,4 +64,4 @@ I believe the web is for everybody, and similarly I believe that virtual reality
 
 It took a very long time for the web to become properly accessible. With the lessons that we've learned from web accessibility, it will take far less for VR.
 
-Still, this doesn't mean that there is no room for improvement and by creating VR applications that fundamentally improve the lives for people with disabilities, we can not only showcase the transformative nature of VR for media consumption, but more importantly, in ways that bring us closer together as humans.
+By creating VR applications that are _accessible_ to everyone, the transformative nature of VR can be _experienced_ by everyone.
