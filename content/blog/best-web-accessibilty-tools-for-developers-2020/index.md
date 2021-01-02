@@ -24,30 +24,30 @@ There are a number of great accessibility blogs on the web which I suggest brows
 
 * [axe](https://www.deque.com/axe/) - axe has quickly become the defacto standard for automated accessibility testing. Deque's axe-core testing engine provides the under the hood implementation for most common tools, and they also provide a free Chrome extension that quickly identifies any in page errors for most common issues while providing guidance on how to resolve them. Definitely my first port of call when testing any new code. 
 
-* [pa11y](https://github.com/pa11y/pa11y) - pa11y is an automated testing tool based on axe-core that can be run on your development environment as part of your commit hooks or front-end build pipeline. It's extremely configurable so you can run automated tests for different accessibility standards and viewports, ignoring specific WCAG rulesets as well as triggering actions on pages as a part of your test suite. @f3igao's wonderful blog post, [How to automate web accessibilty testing](https://medium.com/@f3igao/how-to-automate-web-accessibility-testing-921512bdd4bf) is a great starting off point if you are looking to fully integrate pa11y with your front-end build.
+* [pa11y](https://github.com/pa11y/pa11y) - pa11y is an automated testing tool based on axe-core that can be run on your development environment as part of your commit hooks or front-end build pipeline. It's extremely configurable so you can run automated tests for different accessibility standards and viewports, ignoring specific WCAG rule sets as well as triggering actions on pages as a part of your test suite. @f3igao's wonderful blog post, [How to automate web accessibility testing](https://medium.com/@f3igao/how-to-automate-web-accessibility-testing-921512bdd4bf) is a great starting off point if you are looking to fully integrate pa11y with your front-end build.
 
 * [DomainAccessibilityAudit](https://github.com/MSU-NatSci/DomainAccessibilityAudit) - I found this tool while researching ways to test an entire website for a11y issues and this was a perfect fit. You can feed it a root URL to start testing on and it will scrape all links on all subsequent pages and perform an audit, essentially crawling the entire site and producing a report of a11y issues. You can also input a sitemap.xml if you want to test a specific set of pages instead of crawling the entire site.
 
 * [Accessibility insights for web](https://accessibilityinsights.io/docs/en/web/overview/) - Microsoft's commitment to accessible technologies shines with their free Chrome extension and provides another useful interface to the axe-core framework. 
 
-* [Siteimprove Accessibility Checker](https://chrome.google.com/webstore/detail/siteimprove-accessibility/efcfolpjihicnikpmhnmphjhhpiclljc) - The Siteimprove browser extension provides one of the most comprehensive interfaces to resolving issues with detailed reccomendations on how to fix them. Highly recommended to keep in your toolbox.
+* [Siteimprove Accessibility Checker](https://chrome.google.com/webstore/detail/siteimprove-accessibility/efcfolpjihicnikpmhnmphjhhpiclljc) - The Siteimprove browser extension provides one of the most comprehensive interfaces to resolving issues with detailed recommendations on how to fix them. Highly recommended to keep in your toolbox.
 
 * [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Don't have time or access to install software to run a quick a11y check? Lighthouse comes built in with Chrome DevTools and provides a fast, easy to understand issue checker that integrates perfectly with the Chrome browser. It also offers other suggestions in terms of improving page performance, server configuration and insights into using progressive web applications.
 
 ## Continuous integration
 
-Catching issues before they are in production is one of the major benefits of adding accessiblity tooling to your CI pipeline. Recently there has been huge progress in the ease of integration and reporting in this space, which I expect will continue to improve over the next year.
+Catching issues before they are in production is one of the major benefits of adding accessibility tooling to your CI pipeline. Recently there has been huge progress in the ease of integration and reporting in this space, which I expect will continue to improve over the next year.
 
 * [pa11y-ci](https://github.com/pa11y/pa11y-ci) - A set of command line tools for pa11y, pa11y-ci gives you the opportunity to run your suite of pa11y tests on your CI server. 
 
-* [lighthouse-ci](https://github.com/GoogleChrome/lighthouse-ci) - If you're looking to run a comprehensive set of tests in your CI environment, lighthouse-ci brings all the power of Google's Lighthouse app to the table. In addition to accessibilty checks, lighthouse-ci will report on your app's performance, SEO and best practices in one of the most polished standalone reports available.
+* [lighthouse-ci](https://github.com/GoogleChrome/lighthouse-ci) - If you're looking to run a comprehensive set of tests in your CI environment, lighthouse-ci brings all the power of Google's Lighthouse app to the table. In addition to accessibility checks, lighthouse-ci will report on your app's performance, SEO and best practices in one of the most polished standalone reports available.
 
 ## Screen readers
 
 * [JAWS](https://www.freedomscientific.com/products/software/jaws/) - JAWS is the most popular and oldest screen reader that is still in use. It represents a huge proportion of screen reader users so it is an essential tool when testing for issues. 
 
 
-* [NVDA](https://www.nvaccess.org/about-nvda/) - NVDA is my screen reader of choice for testing because it's open source and free. It's also updated quite freqently and in my experience, has less quirks than JAWS. I expect in the coming years NVDA will overtake JAWS in terms of popularity, so if you were to pick one to learn, NVDA would be it.
+* [NVDA](https://www.nvaccess.org/about-nvda/) - NVDA is my screen reader of choice for testing because it's open source and free. It's also updated quite frequently and in my experience, has less quirks than JAWS. I expect in the coming years NVDA will overtake JAWS in terms of popularity, so if you were to pick one to learn, NVDA would be it.
 
 * [VoiceOver](https://help.apple.com/voiceover/info/guide/) - VoiceOver is the defacto standard for screen readers on iOS and Mac OS X. It is extremely easy to use and the documentation is incredible. The vast majority of screen reader users on mobile are using VoiceOver so it is the most important tool you can use if a mobile audience is your primary demographic.
 

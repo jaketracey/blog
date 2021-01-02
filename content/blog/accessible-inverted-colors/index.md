@@ -14,7 +14,7 @@ Shift+Alt+PrtScr
 
 By default, form inputs like `html±<input>` and `html±<textarea>` will look fine and the colors will invert properly.
 
-However, if you are doing custom styling without using the `border` property, for example using `box-shadow` and hiding the border in a standard color view, you may notice that box shadows on these elements do not appear in the inverted mode, creating an accessiblity issue for users that are using the inverted mode.
+However, if you are doing custom styling without using the `border` property, for example using `box-shadow` and hiding the border in a standard color view, you may notice that box shadows on these elements do not appear in the inverted mode, creating an accessibility issue for users that are using the inverted mode.
 
 A quick trick to fix this issue is by adding a transparent border to those elements, like so:
 

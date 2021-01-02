@@ -3,8 +3,7 @@ title: Styling accessible HTML file inputs
 date: "2020-12-11T22:40:32.169Z"
 ---
 
-The HTML file input is one of the weirder elements I've come across. Although it's used pretty extensively, the default implementation leaves
-a lot to be desired without resorting to Javascript. I investigated what could be done using CSS only in terms of styling and have had some good results.
+The HTML file input is one of the weirder elements I've come across. Although it's used pretty extensively, the default implementation leaves a lot to be desired without resorting to Javascript. I investigated what could be done using CSS only in terms of styling and have had some good results.
 
 ## It's just one one element... but is it?
 
@@ -51,6 +50,7 @@ input[type="file"]::file-selector-button {
 
 
 A few things to note here. Both Firefox and Blink/Chrome based browsers have selectors that allow practically full customization of the file selector button. 
+
 You can add hover/focus/active states using their selectors, for example:
 
 ```sass
@@ -101,5 +101,4 @@ Due to IE11's support becoming smaller and smaller each day, I compromised on th
 
 ## Conclusion
 
-It is entirely possible to style `<input type="file" />` on modern browsers in a way that does not impact the visual look and feel of
-your design. Although not as powerful as a full fledged custom file upload widget, because it is default browser functionality and is widely supported, thanks to the highly vendor specific selectors that are available you can provide an accessible, good looking utility to upload files without any Javascript.
+It is entirely possible to style `<input type="file" />` on modern browsers in a way that does not impact the visual look and feel of your design. Although not as powerful as a full fledged custom file upload widget, because it is default browser functionality and is widely supported, thanks to the highly vendor specific selectors that are available you can provide an accessible, good looking utility to upload files without any Javascript.
