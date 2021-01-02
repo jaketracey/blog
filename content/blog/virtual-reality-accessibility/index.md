@@ -3,7 +3,7 @@ title: Accessible virtual reality takes its first steps
 date: "2020-12-31T22:40:32.169Z"
 ---
 
-One of the promises of virtual reality is the ability to bring worlds to life that would never have been possible using technologies from the past. The speed with which VR has progressed in visual and auditory fidelity has outpaced the web in many respects and with the announcement of 
+One of the promises of virtual reality is the ability to bring to life worlds that would not have been possible using technologies from the past. The speed with which VR has progressed in visual and auditory fidelity has outpaced the web in many respects and with the announcement of 
 a high level [set of accessiblity guidelines](https://developer.oculus.com/blog/introducing-the-accessibility-vrcs/) when publishing VR apps on the Oculus store, the speed with which a fully accessible VR future is becoming viable is increasing.
 
 Given that VR is primarily a visual medium there is no requirement for the application to function for completely non-sighted users. There is, however, welcomes additions to provide assistance for those with hearing, mobility and visual impairments.
