@@ -20,7 +20,7 @@ This alone should increase the usability of all VR apps for those with hearing i
 
 ### Text and in-app controls and elements necessary for app progression should be clearly legible.
 
-This recomendation is not paired with any specifics and as such is open to interpretation. The guideline does suggest that when possible, options to increase contrast or the size of the UI should be available. This guideline could be improved by adding additional details such as what contrast ratios for text and UI elements is sufficient to provide an accessible experience to users with lower visual acuity.
+This recommendation is not paired with any specifics and as such is open to interpretation. The guideline does suggest that when possible, options to increase contrast or the size of the UI should be available. This guideline could be improved by adding additional details such as what contrast ratios for text and UI elements is sufficient to provide an accessible experience to users with lower visual acuity.
 
 ### The app should provide clarity and direction to the user through a combination of visual, audio, and/or haptic feedback when possible.
 
@@ -32,7 +32,7 @@ An essential feature for those without the use of multiple hands - although I ca
 
 ### The app should enable people to edit their display settings such as brightness and contrast to accommodate their visual needs.
 
-Another recomendation that would be useful to see as an operating system level setting or a per-app setting on the OS level. 
+Another recommendation that would be useful to see as an operating system level setting or a per-app setting on the OS level. 
 
 ### The app should either provide color blindness options, or use other techniques such as combining color and pattern for easy visual distinction.
 
