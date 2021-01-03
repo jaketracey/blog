@@ -1,6 +1,6 @@
 ---
-title: The best web accessibility tools for developers
-date: "2020-12-24T22:40:32.169Z"
+title: The best web accessibility tools for developers in 2021
+date: "2021-01-02T22:40:32.169Z"
 ---
 
 The quality of the tools you use defines the speed with which you can diagnose and resolve problems. 

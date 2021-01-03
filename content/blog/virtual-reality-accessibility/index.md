@@ -1,6 +1,6 @@
 ---
 title: Accessible virtual reality
-date: "2020-12-31T22:40:32.169Z"
+date: "2021-01-03T22:40:32.169Z"
 ---
 
 One of the promises of virtual reality is the ability to bring to life worlds that would never have been possible using technologies from the past. The speed with which VR has progressed in visual and auditory fidelity has outpaced the web in many respects and with the announcement of 
