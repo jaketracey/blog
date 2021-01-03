@@ -120,7 +120,25 @@ body {
   font-style: italic;
 
   .links {
-    font-style: normal;
+    padding-bottom: var(--spacing-4);
+
+    ul {
+
+      font-size: var(--fontSize-2);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-style: normal;
+
+      li {
+        display: inline;
+        margin: 0 var(--spacing-6);
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
   }
 }
 

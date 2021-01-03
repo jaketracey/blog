@@ -34,7 +34,13 @@ const Layout = ({ location, title, description, children }) => {
       <header className="global-header">{header}</header>
       <main id="main-content">{children}</main>
       <footer className="main-footer">
-        <p class="links"><a href="/about">About</a>, <a href="https://twitter.com/jaketracey">Twitter</a>,  <a href="https://linkedin.com/in/jaketracey">LinkedIn</a></p>
+        <nav class="links" aria-label="Personal links">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="https://twitter.com/jaketracey">Twitter</a></li>
+            <li><a href="https://linkedin.com/in/jaketracey">LinkedIn</a></li>
+          </ul>
+        </nav>
         <p>All great deeds and all great thoughts have a ridiculous beginning. Great works are often born on a street corner or in a restaurant's revolving door. - Albert Camus</p>
       </footer>
     </div>
