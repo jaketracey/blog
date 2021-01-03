@@ -5,7 +5,7 @@ module.exports = {
       name: `Jake Tracey`,
       summary: `a programmer who lives in Melbourne, Australia`,
     },
-    description: `Thoughts on web accessibility, user experience and technology.`,
+    description: `Thoughts on accessibility, user experience and technology.`,
     siteUrl: `https://jaketracey.com/`,
     social: {
       twitter: `jaketracey`,
