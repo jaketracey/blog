@@ -22,7 +22,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle} description={siteDescription}>
-      <SEO title="All posts" />
+      <SEO title="Thoughts on web accessibility, user experience and technology." />
       <ol className="home-article-list">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
