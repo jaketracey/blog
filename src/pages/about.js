@@ -11,7 +11,7 @@ const AboutPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="About" />
-      <h1>Hello, I'm Jake Tracey, developer and accessibility consultant from Melbourne, Australia.</h1>
+      <h1 class="about-heading">Hello, I'm Jake Tracey, developer and accessibility consultant from Melbourne, Australia.</h1>
       <p><img className="about-picture" src={me} alt="Jake Tracey" /></p>
       <p>My passions are in human computer interaction, user experience, accessibility and virtual reality. For over 15 years I've worked professionally as a front-end developer designing and implementing applications for a variety of industries, from banking, healthcare to gaming and streaming services.</p>
       <p>With the team over at <a href="https://noice.work">Noice</a>, we provide user experience, web development and accessibility consulting.</p>
