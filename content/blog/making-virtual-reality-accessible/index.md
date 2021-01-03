@@ -1,5 +1,5 @@
 ---
-title: Accessible virtual reality
+title: Making virtual reality accessible
 date: "2021-01-03T22:40:32.169Z"
 ---
 
