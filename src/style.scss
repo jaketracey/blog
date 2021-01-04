@@ -138,6 +138,7 @@ body::-webkit-scrollbar-thumb {
   padding: var(--spacing-6) var(--spacing-0);
   font-size: var(--fontSize-2);
   font-style: italic;
+  color: var(--color-heading);
 
   .links {
     padding-bottom: var(--spacing-4);
@@ -175,12 +176,12 @@ hr {
 
 .skip-to-content-link {
   position: absolute;
-  padding: var(--spacing-1);
   top: -100px;
+  margin: 0 auto;
 }
 
 .skip-to-content-link:focus {
-  top: 0;
+  top: 9px;
 }
 
 /* Heading */
@@ -319,7 +320,7 @@ a {
   color: var(--color-primary);
   outline: none;
   text-decoration: none;
-  outline-offset: 0.2rem;
+  outline-offset: 0 rem;
   outline: 3px solid transparent;
   transition: all 0.3s ease;
   text-shadow: 1px 1px 0 var(--color-text-shadow), -1px 1px 0 var(--color-text-shadow), 2px 0 0 var(--color-text-shadow), -2px 0 0 var(--color-text-shadow);
@@ -333,9 +334,10 @@ a:hover {
 
 a:focus {
   outline: 3px solid #666;
-  outline-offset: 0.2rem;
+  outline-offset: 0.6rem;
   text-decoration: none;
   box-shadow: none;
+  color: var(--color-heading);
 }
 
 /* Custom classes */
