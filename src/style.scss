@@ -65,6 +65,8 @@
   --color-accent: #d1dce5;
   --color-text-shadow: #fff;
   --color-border: rgb(206, 206, 206);
+  --scrollbarBG: #d1dce5;
+  --thumbBG: #4f5969;
 
   @media (prefers-color-scheme: dark) {
       --color-primary: #e45e6e;
@@ -74,7 +76,11 @@
       --color-heading-black: #ccc;
       --color-text-shadow: #121212;
       --color-border: rgb(104, 104, 104);
+      --scrollbarBG: #121212;
+      --thumbBG: rgb(104, 104, 104);
   }
+
+  
 }
 
 /* HTML elements */
@@ -86,6 +92,7 @@
 }
 
 html {
+
   line-height: var(--lineHeight-normal);
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
@@ -93,15 +100,28 @@ html {
 }
 
 body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
   font-family: var(--font-body);
   font-size: var(--fontSize-2);
   color: var(--color-text);
   background: url('/bg.gif') repeat;
   @media (prefers-color-scheme: dark) {
-    background: #121212;
+    background: url('/bg.png') repeat;
   }
   position: relative;
   text-shadow: --color-text-shadow 0 0 1px;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
 }
 
 .global-header {
@@ -384,11 +404,11 @@ a:focus {
 .about-picture {
   width: 30%;
   float: right;
-  border-radius: 5%;
+  border-radius: 2%;
 
-  margin: var(--spacing-4) var(--spacing-16) var(--spacing-16) var(--spacing-16);
+  margin: var(--spacing-4) 0 var(--spacing-16) var(--spacing-16);
   @media (max-width: 42rem) {
-    margin: var(--spacing-2) var(--spacing-4) var(--spacing-4) var(--spacing-4);
+    margin: var(--spacing-2) 0 var(--spacing-4) var(--spacing-4);
   }
 }
 
