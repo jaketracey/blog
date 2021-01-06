@@ -132,6 +132,20 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+figure {
+  margin: 0;
+  padding: var(--spacing-4) 0;
+  text-align: center; 
+  img {
+    width: 80%;
+    align-items: center;
+  }
+}
+
+figcaption {
+  font-style: italic;
+}
+
 .main-footer {
   margin-top: var(--spacing-8);
   border-top: 1px solid var(--color-border);
