@@ -107,7 +107,7 @@ body {
   color: var(--color-text);
   background: url('/bg.gif') repeat;
   @media (prefers-color-scheme: dark) {
-    background: url('/bg.png') repeat;
+    background: #111 url('/bg.png') repeat;
   }
   position: relative;
   text-shadow: --color-text-shadow 0 0 1px;
