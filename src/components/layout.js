@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Animation from '../components/animations';
+import SeasonalTree from '../components/seasonal-tree';
 import logo from "../../content/assets/logo.json";
 
 const Layout = ({ location, title, description, children }) => {
@@ -28,6 +29,7 @@ const Layout = ({ location, title, description, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
+      <SeasonalTree />
       <a class="skip-to-content-link" href="#main-content">
         Skip to content
       </a>

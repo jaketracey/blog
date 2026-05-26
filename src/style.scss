@@ -482,3 +482,229 @@ a:focus {
     margin-left: var(--spacing-0);
   }
 }
+
+/* Seasonal background tree — feature piece anchored to the left */
+.seasonal-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.seasonal-bg__tree-zone {
+  position: absolute;
+  bottom: -5vh;
+  left: -4vw;
+  height: min(110vh, 920px);
+  aspect-ratio: 1 / 1;
+}
+
+.seasonal-bg__tree {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.18;
+  transition: filter 1.6s ease, opacity 1.6s ease;
+  user-select: none;
+
+  @media (prefers-color-scheme: dark) {
+    opacity: 0.14;
+  }
+}
+
+@media (max-width: 50rem) {
+  .seasonal-bg__tree-zone {
+    left: -15vw;
+    height: min(85vh, 600px);
+  }
+  .seasonal-bg__tree {
+    opacity: 0.1;
+    @media (prefers-color-scheme: dark) { opacity: 0.09; }
+  }
+  .seasonal-bg__particle--falling { display: none; }
+}
+
+.seasonal-bg--spring .seasonal-bg__tree {
+  filter: sepia(0.5) hue-rotate(285deg) saturate(1.8) brightness(1.02);
+}
+.seasonal-bg--summer .seasonal-bg__tree {
+  filter: sepia(0.55) hue-rotate(45deg) saturate(1.4) brightness(1.02);
+}
+.seasonal-bg--autumn .seasonal-bg__tree {
+  filter: sepia(0.85) saturate(2) hue-rotate(-12deg) brightness(1.02);
+}
+.seasonal-bg--winter .seasonal-bg__tree {
+  filter: sepia(0.3) hue-rotate(165deg) saturate(0.55) brightness(1.05);
+}
+
+.seasonal-bg__particles {
+  position: absolute;
+  inset: 0;
+}
+
+.seasonal-bg__particle {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Particles attached to the tree — sit on branches, sway gently */
+.seasonal-bg__particle--attached {
+  animation: branch-sway ease-in-out infinite alternate;
+}
+@keyframes branch-sway {
+  0%   { transform: translate(0, 0) rotate(var(--rot, 0deg)) scale(var(--scale, 1)); opacity: 0.75; }
+  100% { transform: translate(2px, -1px) rotate(calc(var(--rot, 0deg) + 6deg)) scale(var(--scale, 1)); opacity: 0.95; }
+}
+
+.seasonal-bg__particle--falling {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Spring — cherry blossom shapes with color variation */
+.seasonal-bg--spring .seasonal-bg__particle {
+  width: 10px;
+  height: 10px;
+  background: none;
+  background-color: #f9b3c8;
+  border-radius: 0;
+  filter: drop-shadow(0 0 0.5px rgba(255, 200, 220, 0.5));
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><g fill='black'><circle cx='10' cy='5' r='4'/><circle cx='15' cy='9' r='4'/><circle cx='13' cy='15' r='4'/><circle cx='7' cy='15' r='4'/><circle cx='5' cy='9' r='4'/></g></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><g fill='black'><circle cx='10' cy='5' r='4'/><circle cx='15' cy='9' r='4'/><circle cx='13' cy='15' r='4'/><circle cx='7' cy='15' r='4'/><circle cx='5' cy='9' r='4'/></g></svg>");
+}
+.seasonal-bg--spring .seasonal-bg__particle--color-1 { background-color: #f9b3c8; }
+.seasonal-bg--spring .seasonal-bg__particle--color-2 { background-color: #fdd0dc; }
+.seasonal-bg--spring .seasonal-bg__particle--color-3 { background-color: #f49bb9; }
+.seasonal-bg--spring .seasonal-bg__particle--color-4 { background-color: #ffe1ea; }
+.seasonal-bg--spring .seasonal-bg__particle--color-5 { background-color: #ec84a7; }
+@media (prefers-color-scheme: dark) {
+  .seasonal-bg--spring .seasonal-bg__particle--color-1 { background-color: #e893b1; }
+  .seasonal-bg--spring .seasonal-bg__particle--color-2 { background-color: #f0a8c0; }
+  .seasonal-bg--spring .seasonal-bg__particle--color-3 { background-color: #d07a96; }
+  .seasonal-bg--spring .seasonal-bg__particle--color-4 { background-color: #f5c0d2; }
+  .seasonal-bg--spring .seasonal-bg__particle--color-5 { background-color: #c46885; }
+}
+.seasonal-bg--spring .seasonal-bg__particle--falling {
+  animation-name: petal-drift;
+}
+@keyframes petal-drift {
+  0%   { transform: translate(0, 0) rotate(var(--rot, 0deg)) scale(var(--scale, 1)); opacity: 0; }
+  12%  { opacity: 0.85; }
+  100% { transform: translate(var(--drift, 0px), 95vh) rotate(calc(var(--rot, 0deg) + 540deg)) scale(var(--scale, 1)); opacity: 0; }
+}
+
+/* Summer — glowing motes on branches, fireflies wandering */
+.seasonal-bg--summer .seasonal-bg__particle {
+  width: 4px;
+  height: 4px;
+  background: #fff4bd;
+  border-radius: 50%;
+  box-shadow:
+    0 0 6px 2px rgba(255, 226, 140, 0.85),
+    0 0 14px 4px rgba(255, 198, 90, 0.45);
+  @media (prefers-color-scheme: dark) {
+    box-shadow:
+      0 0 8px 2px rgba(255, 226, 140, 0.95),
+      0 0 22px 6px rgba(255, 198, 90, 0.55);
+  }
+}
+.seasonal-bg--summer .seasonal-bg__particle--falling {
+  animation-name: firefly-wander;
+  animation-timing-function: ease-in-out;
+}
+@keyframes firefly-wander {
+  0%   { transform: translate(0, 0) scale(var(--scale, 1)); opacity: 0; }
+  15%  { opacity: 0.9; transform: translate(calc(var(--drift, 0px) * 0.4), -8vh) scale(var(--scale, 1)); }
+  45%  { transform: translate(var(--drift, 0px), 15vh) scale(var(--scale, 1)); opacity: 0.5; }
+  75%  { opacity: 0.95; transform: translate(calc(var(--drift, 0px) * -0.2), 45vh) scale(var(--scale, 1)); }
+  100% { transform: translate(0, 90vh) scale(var(--scale, 1)); opacity: 0; }
+}
+
+/* Autumn — leaf shapes with shape & color variation */
+.seasonal-bg--autumn .seasonal-bg__particle {
+  width: 14px;
+  height: 11px;
+  background: none;
+  background-color: #c0552a;
+  border-radius: 0;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16'><path d='M10 2 C16 4 17 11 10 14 C3 11 4 4 10 2 Z' fill='black'/></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16'><path d='M10 2 C16 4 17 11 10 14 C3 11 4 4 10 2 Z' fill='black'/></svg>");
+}
+.seasonal-bg--autumn .seasonal-bg__particle--shape-b {
+  width: 14px;
+  height: 12px;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16'><path d='M10 2 L12 5 L16 5 L14 8 L17 13 L10 11 L3 13 L6 8 L4 5 L8 5 Z' fill='black'/></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16'><path d='M10 2 L12 5 L16 5 L14 8 L17 13 L10 11 L3 13 L6 8 L4 5 L8 5 Z' fill='black'/></svg>");
+}
+.seasonal-bg--autumn .seasonal-bg__particle--shape-c {
+  width: 13px;
+  height: 13px;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16'><path d='M10 2 C12 3 13 5 12 6 C15 5 16 9 13 9 C16 11 13 14 11 12 C11 14 9 14 9 12 C7 14 4 11 7 9 C4 9 5 5 8 6 C7 5 8 3 10 2 Z' fill='black'/></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16'><path d='M10 2 C12 3 13 5 12 6 C15 5 16 9 13 9 C16 11 13 14 11 12 C11 14 9 14 9 12 C7 14 4 11 7 9 C4 9 5 5 8 6 C7 5 8 3 10 2 Z' fill='black'/></svg>");
+}
+.seasonal-bg--autumn .seasonal-bg__particle--shape-d {
+  width: 18px;
+  height: 8px;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16'><path d='M1 8 C6 3 14 3 19 8 C14 13 6 13 1 8 Z' fill='black'/></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 16'><path d='M1 8 C6 3 14 3 19 8 C14 13 6 13 1 8 Z' fill='black'/></svg>");
+}
+.seasonal-bg--autumn .seasonal-bg__particle--color-1 { background-color: #c0552a; }
+.seasonal-bg--autumn .seasonal-bg__particle--color-2 { background-color: #d49019; }
+.seasonal-bg--autumn .seasonal-bg__particle--color-3 { background-color: #a13e1f; }
+.seasonal-bg--autumn .seasonal-bg__particle--color-4 { background-color: #b87333; }
+.seasonal-bg--autumn .seasonal-bg__particle--color-5 { background-color: #e7a23e; }
+.seasonal-bg--autumn .seasonal-bg__particle--falling {
+  animation-name: leaf-tumble;
+  animation-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+@keyframes leaf-tumble {
+  0%   { transform: translate(0, 0) rotate(var(--rot, 0deg)) scale(var(--scale, 1)); opacity: 0; }
+  10%  { opacity: 0.92; }
+  50%  { transform: translate(var(--drift, 0px), 45vh) rotate(calc(var(--rot, 0deg) + 360deg)) scale(var(--scale, 1)); }
+  100% { transform: translate(calc(var(--drift, 0px) * -0.4), 95vh) rotate(calc(var(--rot, 0deg) + 900deg)) scale(var(--scale, 1)); opacity: 0; }
+}
+
+/* Winter — snow resting on branches, flakes drifting down */
+.seasonal-bg--winter .seasonal-bg__particle {
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+  filter: blur(0.4px);
+
+  &:nth-child(3n)  { width: 3px; height: 3px; }
+  &:nth-child(5n)  { width: 9px; height: 9px; }
+  &:nth-child(7n)  { background: rgba(220, 235, 255, 0.85); }
+}
+.seasonal-bg--winter .seasonal-bg__particle--falling {
+  animation-name: snowfall;
+}
+@keyframes snowfall {
+  0%   { transform: translate(0, 0) scale(var(--scale, 1)); opacity: 0; }
+  10%  { opacity: 0.9; }
+  90%  { opacity: 0.9; }
+  100% { transform: translate(var(--drift, 0px), 95vh) scale(var(--scale, 1)); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seasonal-bg__particle--falling { display: none; }
+  .seasonal-bg__particle--attached { animation: none; opacity: 0.85; }
+  .seasonal-bg__tree { transition: none; }
+}

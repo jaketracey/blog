@@ -11,12 +11,12 @@ const AboutPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="About" />
-      <h1 class="about-heading">Hello, I'm Jake Tracey, developer and accessibility consultant from Melbourne, Australia.</h1>
+      <h1 class="about-heading">Hello, I'm Jake Tracey, developer and founder of <a href="https://noice.net.au">Noice</a>, a digital agency in Melbourne, Australia.</h1>
       <p><img className="about-picture" src={me} alt="Jake Tracey" /></p>
-      <p>My passions are in human computer interaction, user experience, accessibility and virtual reality. For over 15 years I've worked professionally as a front-end developer designing and implementing applications for a variety of industries, from banking, healthcare to gaming and streaming services.</p>
-      <p>With the team over at <a href="https://noice.work">Noice</a>, we provide user experience, web development and accessibility consulting.</p>
-      <p>I'm also a bit of a foodie and enjoy hiking with my partner, Rihana and our dog, Bean.</p>
-      <p>If you're interested in getting in touch, feel free to <a href="mailto:me@jaketracey.com">send me an email</a> or connect with me on Twitter, <a href="https://twitter.com/jaketracey">@jaketracey</a> or on <a href="https://www.linkedin.com/in/jaketracey/">LinkedIn</a>.</p>
+      <p>At <a href="https://noice.net.au">Noice</a>, my team and I help clients design, build and ship digital products — from early ideas through to launch and beyond. I've spent more than 15 years as a front-end developer across industries like banking, healthcare, gaming and streaming, and these days I split my time between hands-on engineering and running the business.</p>
+      <p>I care a lot about craft — about software that's well-made, fast, and considered. Human-computer interaction, user experience, and the occasional foray into virtual reality are the threads that have run through my whole career.</p>
+      <p>Outside of work, I'm a bit of a foodie and spend most weekends hiking with my partner Rihana and our dog Bean.</p>
+      <p>Want to work together? Take a look at what we do at <a href="https://noice.net.au">noice.net.au</a>, connect with me on <a href="https://www.linkedin.com/in/jaketracey/">LinkedIn</a>, or <a href="mailto:me@jaketracey.com">send me an email</a>.</p>
     </Layout>
   )
 }
