@@ -11,10 +11,10 @@
     "url": "https://github.com/jaketracey/blog/issues"
   },
   "dependencies": {
+    "@fontsource/questrial": "^4.0.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "fontsource-fanwood-text": "^3.1.5",
-    "@fontsource/questrial": "^4.0.0",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-feed": "^2.7.0",
@@ -30,7 +30,6 @@
     "gatsby-plugin-sitemap": "^2.9.0",
     "gatsby-remark-copy-linked-files": "^2.7.0",
     "gatsby-remark-images": "^3.8.1",
-    "gatsby-remark-lottie": "^1.0.3",
     "gatsby-remark-prismjs": "^3.10.0",
     "gatsby-remark-responsive-iframe": "^2.5.0",
     "gatsby-remark-smartypants": "^2.4.0",
